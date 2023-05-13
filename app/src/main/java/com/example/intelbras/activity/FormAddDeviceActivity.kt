@@ -13,7 +13,7 @@ class FormAddDeviceActivity : AppCompatActivity() {
         replaceFragment()
     }
 
-    fun replaceFragment() {
+    private fun replaceFragment() {
         val fragment = FormAddDeviceFragment()
         supportFragmentManager.beginTransaction()
             .replace(R.id.fragment_container, fragment)
