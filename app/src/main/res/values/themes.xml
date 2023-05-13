@@ -1,0 +1,17 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Intelbras" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/blue_cyan2</item>
+        <item name="colorPrimaryVariant">@color/blue_cyan2</item>
+        <item name="colorOnPrimary">@color/blue_cyan2</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/blue_cyan</item>
+        <item name="colorSecondaryVariant">@color/blue_cyan</item>
+        <item name="colorOnSecondary">@color/blue_cyan</item>
+        <item name="android:windowBackground">@color/blue_cyan2</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+    </style>
+
+    <style name="Theme.Intelbras" parent="Base.Theme.Intelbras" />
+</resources>

@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">intelbras</string>
+
+    <string-array name="spinner_options">
+        <item>Vídeo</item>
+        <item>Alarme</item>
+    </string-array>
+</resources>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/ic_home_icon"
+        app:showAsAction="always"
+        android:contentDescription="descrição"
+         android:title="TODO" />
+
+    <item
+        android:id="@+id/favorite"
+        android:icon="@drawable/ic_favorite_icon"
+        app:showAsAction="always"
+        android:contentDescription="descrição"
+        android:title="TODO" />
+
+    <item
+        android:id="@+id/video_device"
+        android:icon="@drawable/ic_camera_icon"
+        app:showAsAction="always"
+        android:contentDescription="descrição"
+        android:title="TODO" />
+
+    <item
+        android:id="@+id/alarm_central"
+        android:icon="@drawable/ic_alarm_item"
+        app:showAsAction="always"
+        android:contentDescription="descrição"
+        android:title="TODO" />
+
+</menu>
