@@ -1,0 +1,33 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/edit_text_name"
+        style="@style/spinner_style"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:hint="@string/name" />
+
+    <EditText
+        android:id="@+id/edit_text_serial_number"
+        style="@style/spinner_style"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:hint="@string/numero_serie" />
+
+    <EditText
+        android:id="@+id/edit_text_user"
+        style="@style/spinner_style"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:hint="@string/usuario" />
+
+    <EditText
+        android:id="@+id/edit_text_password"
+        style="@style/spinner_style"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:hint="@string/password" />
+</LinearLayout>

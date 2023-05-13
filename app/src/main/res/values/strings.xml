@@ -1,5 +1,12 @@
 <resources>
     <string name="app_name">intelbras</string>
+    <string name="name">Nome</string>
+    <string name="numero_serie">Número de série</string>
+    <string name="mac_address">Mac Address</string>
+    <string name="password">Senha</string>
+    <string name="usuario">Usuário</string>
+    <string name="tittle_header">Novo Dispositivo</string>
+    <string name="save_btn">Salvar</string>
 
     <string-array name="spinner_options">
         <item>Vídeo</item>
