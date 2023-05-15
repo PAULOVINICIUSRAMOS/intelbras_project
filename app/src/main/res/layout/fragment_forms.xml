@@ -1,0 +1,73 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/alarm_form_id"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/video_form"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <EditText
+            android:id="@+id/edit_text_name_video"
+            style="@style/spinner_style"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="@string/name" />
+
+        <EditText
+            android:id="@+id/edit_text_serial_video"
+            style="@style/spinner_style"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="@string/numero_serie" />
+
+        <EditText
+            android:id="@+id/edit_text_user_video"
+            style="@style/spinner_style"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="@string/usuario" />
+
+        <EditText
+            android:id="@+id/edit_text_password_video"
+            style="@style/spinner_style"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="@string/password" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/alarm_form"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <EditText
+            android:id="@+id/edit_text_name_alarm"
+            style="@style/spinner_style"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="@string/name" />
+
+        <EditText
+            android:id="@+id/edit_text_address_alarm"
+            style="@style/spinner_style"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="@string/mac_address" />
+
+        <EditText
+            android:id="@+id/edit_text_password_alarm"
+            style="@style/spinner_style"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="@string/password" />
+    </LinearLayout>
+
+</LinearLayout>

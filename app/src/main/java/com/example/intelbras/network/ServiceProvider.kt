@@ -17,7 +17,7 @@ object ServiceProvider {
         .addInterceptor { chain ->
             val original = chain.request()
             val requestBuilder = original.newBuilder()
-                .header("Accept", "application/json")
+                .header("Content-Type", "application/json")
                 .header("Authorization", "Bearer $token")
             val request = requestBuilder.build()
             chain.proceed(request)

@@ -42,10 +42,9 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
-                    <FrameLayout
-                        android:id="@+id/form_container"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
+                    <include
+                        android:id="@+id/fragment_forms"
+                        layout="@layout/fragment_forms" />
 
                 </LinearLayout>
 

@@ -1,8 +1,14 @@
-package com.ramos.intelbras_use_case.models
+package com.example.intelbras.models
+import com.google.gson.annotations.SerializedName
 
-class AlarmCentral(
+data class AlarmCentral(
+    @SerializedName("id")
+    val id: String,
+    @SerializedName("name")
     val name: String,
+    @SerializedName("macAddress")
     val macAddress: String,
+    @SerializedName("password")
     val password: String
 ) {
 }
