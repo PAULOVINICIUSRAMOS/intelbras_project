@@ -4,14 +4,19 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import androidx.lifecycle.lifecycleScope
 import com.example.intelbras.api.ServiceApi
 import com.example.intelbras.databinding.ActivityMainBinding
 import com.example.intelbras.network.ServiceProvider
 import com.example.intelbras.ui.activity.FormAddDeviceActivity
 import com.google.gson.JsonObject
+import kotlinx.coroutines.launch
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+import kotlin.coroutines.resume
+import kotlin.coroutines.resumeWithException
+import kotlin.coroutines.suspendCoroutine
 
 class MainActivity : AppCompatActivity() {
 
@@ -27,30 +32,37 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, FormAddDeviceActivity::class.java)
             startActivity(intent)
         }
-        getAlarms()
+
+        lifecycleScope.launch {
+            try {
+                val alarms = getAlarms()
+                Toast.makeText(getApplicationContext(), alarms[1], Toast.LENGTH_SHORT).show()
+            } catch (e: Exception) {
+                Toast.makeText(getApplicationContext(), "ERROR: ${e.message}", Toast.LENGTH_SHORT).show()
+            }
+        }
     }
 
-    fun getAlarms() {
+    suspend fun getAlarms(): List<String> = suspendCoroutine { continuation ->
         val retrofit = ServiceProvider.getRetrofitInstance()
         val endpoint = retrofit.create(ServiceApi::class.java)
-        var value = mutableListOf<String>()
         endpoint.getAllAlarm().enqueue(object : Callback<JsonObject> {
             override fun onResponse(call: Call<JsonObject>, response: Response<JsonObject>) {
                 if (response.isSuccessful) {
-                    var data = mutableListOf<String>()
+                    val data = mutableListOf<String>()
                     response.body()?.keySet()?.iterator()?.forEach {
                         data.add(it)
-                        value = data
                     }
-                    println(data.count())
+                    continuation.resume(data)
+                } else {
+                    continuation.resumeWithException(Exception("Request failed with code ${response.code()}"))
                 }
             }
 
             override fun onFailure(call: Call<JsonObject>, t: Throwable) {
-                println("ERROR")
+                continuation.resumeWithException(t)
             }
         })
-        Toast.makeText(getApplicationContext(), value.get(1), Toast.LENGTH_SHORT).show();
     }
 
 }
