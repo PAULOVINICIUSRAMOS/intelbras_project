@@ -8,20 +8,23 @@
         android:id="@+id/edit_text_name"
         android:layout_width="match_parent"
         android:layout_height="48dp"
-        style="@style/spinner_style"
+        style="@style/edit_text_style"
+        android:textCursorDrawable="@null"
         android:hint="@string/name" />
 
     <EditText
         android:id="@+id/edit_text_mac_address"
         android:layout_width="match_parent"
         android:layout_height="48dp"
-        style="@style/spinner_style"
+        style="@style/edit_text_style"
+        android:textCursorDrawable="@null"
         android:hint="@string/mac_address" />
 
     <EditText
         android:id="@+id/edit_text_password"
         android:layout_width="match_parent"
         android:layout_height="48dp"
-        style="@style/spinner_style"
+        style="@style/edit_text_style"
+        android:textCursorDrawable="@null"
         android:hint="@string/password" />
 </LinearLayout>

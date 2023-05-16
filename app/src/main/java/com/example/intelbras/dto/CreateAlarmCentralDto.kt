@@ -1,7 +1,7 @@
-package com.example.intelbras.models
+package com.example.intelbras.dto
 import com.google.gson.annotations.SerializedName
 
-data class AlarmCentral(
+data class CreateAlarmCentralDto(
     @SerializedName("name")
     val name: String,
     @SerializedName("macAddress")

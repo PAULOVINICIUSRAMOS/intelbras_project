@@ -1,6 +1,6 @@
-package com.example.intelbras.activity
+package com.example.intelbras.ui.activity
 
-import FormAddDeviceFragment
+import FormNewDeviceFragment
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.intelbras.R
@@ -14,7 +14,7 @@ class FormAddDeviceActivity : AppCompatActivity() {
     }
 
     private fun replaceFragment() {
-        val fragment = FormAddDeviceFragment()
+        val fragment = FormNewDeviceFragment()
         supportFragmentManager.beginTransaction()
             .replace(R.id.fragment_container, fragment)
             .addToBackStack(null)

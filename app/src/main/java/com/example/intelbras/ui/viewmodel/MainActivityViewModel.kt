@@ -1,7 +1,7 @@
-package com.example.intelbras.viewmodel
+package com.example.intelbras.ui.viewmodel
 
 import androidx.lifecycle.ViewModel
-import com.example.intelbras.api.ServiceApi
+import com.example.intelbras.api.service.ServiceApi
 import com.example.intelbras.models.AlarmCentral
 import com.example.intelbras.models.VideoDevice
 import com.example.intelbras.network.ServiceProvider
